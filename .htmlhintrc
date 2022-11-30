@@ -11,6 +11,5 @@
   "title-require": true,
   "alt-require": true,
   "tag-self-close": true,
-  "head-script-disabled": true,
-  "attr-value-not-empty": true
+  "head-script-disabled": true
 }
