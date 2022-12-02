@@ -43,12 +43,10 @@ body {
 /* 텍스트 링크 모음 */
 
 .member {
-  /* background-color: aqua; */
   text-align: right;
 }
 
 .member li{
-  /* background-color: pink; */
   display: inline-block;
 }
 
