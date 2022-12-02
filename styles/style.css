@@ -34,18 +34,13 @@ body {
 .main {
   background-color: pink;
   height: 50vh;
-  display: flow-root;
-  padding: 0 15px;
-}
-
-.group {
-  margin: 0 15px;
-  float: left;
+  display: flex;
 }
 
 .group1 {
   background-color: violet;
   width: 250px;
+  order: 1;
 }
 
 .group2 {
