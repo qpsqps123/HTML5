@@ -33,24 +33,33 @@ body {
 /* 메인 */
 .main {
   background-color: pink;
-  height: 50vh;
+  min-height: 450px;
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 30px;
+  /* flex-direction: row;
+  flex-wrap: nowrap; */
 }
 
 .group1 {
   background-color: violet;
   width: 250px;
-  order: 1;
+  /* flex-shrink: 2; */
 }
 
 .group2 {
   background-color: hotpink;
   width: 380px;
+  /* flex-shrink: 1; */
 }
 
 .group3 {
   background-color: purple;
+  /* flex-grow: 1; */
   width: 190px;
+  /* flex-shrink: 1; */
 }
 
 /* 슬로건 */
