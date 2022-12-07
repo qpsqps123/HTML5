@@ -1,5 +1,6 @@
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(../styles/fontello.css);
 
 /* 숨김 콘텐츠 */
 .a11y-hidden {
@@ -59,6 +60,7 @@ body {
   position: absolute;
   top: 45px;
   left: 60px;
+  z-index: 999;
 }
 
 /* 텍스트 링크 모음 */
@@ -83,17 +85,13 @@ body {
   text-transform: capitalize;
 }
 
-/* .member li:last-child a{
-  padding-right: 0;
-} */
-
 .divider {
   margin-right: 4px;
 }
 
 /* 메인 메뉴 */
 .navigation {
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 
 .menu {
@@ -110,14 +108,15 @@ body {
   border-radius: 0 0 5px 5px;
   padding-left: 230px;
   height: 47px;
+  position: relative;
 }
 
-.menu li {
-  float: left;
+.menu > li:nth-child(-n+3) {
+  position: relative;
 }
 
 .menu-item {
-  /* float: left; */
+  float: left;
   border-left: 2px solid #fff;
 }
 
@@ -142,7 +141,9 @@ body {
   border: 1px solid #000;
 }
 
-/* .is-active .menu-button::after{
+/* 메뉴 아래쪽에 짧은 라인 만드는 또 다른 방법.권장하지는 않음.
+   부모의 속성 값에 영향을 받을 위험성이 크다.
+  .is-active .menu-button::after{
   content: '';
   position: absolute;
   bottom: 0px;
@@ -154,21 +155,101 @@ body {
 } */
 
 .sub-menu {
-  background-color: pink;
   position: absolute;
+  top: 47px;
   display: none;
+  padding: 4px 0;
+}
+
+.menu-html,
+.menu-css,
+.menu-standards {
+  left: 0;
+}
+  
+.menu-accessibility,
+.menu-qna,
+.menu-archive {
+  right: 0;
 }
 
 .is-active .sub-menu {
-display: block;
-  /* display: flex;
+  display: block;
+  white-space: nowrap;
+  /* 서브메뉴를 아래로 정렬하고 싶다면
+  display: flex;
   flex-direction: column; */
 }
 
+.sub-menu li {
+  display: inline-block;
+}
+
+.sub-menu a::before {
+  content: '\e805';
+  font-family: "fontello";
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sub-menu a:hover::before,
+.sub-menu a:focus::before {
+  content: "\e801";
+}
+
+.sub-menu a {
+  display: inline-block;
+  padding: 6px 0;
+}
+
+.sub-menu a:hover, 
+.sub-menu a:focus {
+  color: #f00
+}
+
 /* 비주얼 */
+@keyframes move-effect {
+  0%{
+    font-size: 12px;
+    opacity: 0.2;
+    transform: translate(0, 0);
+  }
+
+  100%{
+    font-size: 24px;
+    opacity: 1;
+    transform: translate(400px, 75px);
+  }
+}
+
 .visual {
   background-color: orange;
-  height: 10vh;
+  height: 120px;
+  position: relative;
+}
+/* 
+transform으로 애니메이션 구현할 때, 다른 요소로부터 간섭 받는 문제. 테스트용 코드.
+.visual-text2 {
+  transform: translate(20px, 20px);
+  animation: move-effect 2s forwards;
+} */
+
+.visual-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: coral;
+  display: inline-block;
+  animation: move-effect 2s forwards;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 /* 메인 */
