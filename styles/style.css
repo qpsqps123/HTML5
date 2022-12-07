@@ -112,8 +112,12 @@ body {
   height: 47px;
 }
 
-.menu-item {
+.menu li {
   float: left;
+}
+
+.menu-item {
+  /* float: left; */
   border-left: 2px solid #fff;
 }
 
@@ -128,10 +132,37 @@ body {
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
 }
 
+.is-active .menu-button {
+  color: #ff0;
+}
+
+.is-active .menu-button::after {
+  content: "";
+  display: block;
+  border: 1px solid #000;
+}
+
+/* .is-active .menu-button::after{
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  background-color: #212121;
+  width: calc(100% - 46px);
+  height: 2px;
+  transform: translateX(-50%);
+} */
+
 .sub-menu {
   background-color: pink;
   position: absolute;
   display: none;
+}
+
+.is-active .sub-menu {
+display: block;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 /* 비주얼 */
