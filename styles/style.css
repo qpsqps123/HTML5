@@ -219,16 +219,26 @@ body {
 
 /* 비주얼 */
 @keyframes move-effect {
-  0%{
+  0% {
     font-size: 12px;
     opacity: 0.2;
     transform: translate(0, 0);
   }
 
-  100%{
+  100% {
     font-size: 24px;
     opacity: 1;
     transform: translate(400px, 75px);
+  }
+}
+
+@keyframes fade-effect {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
@@ -236,6 +246,28 @@ body {
   height: 120px;
   position: relative;
 }
+
+.visual::before, .visual::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.visual::before {
+  background: url(./images/ani_flower_01.png) no-repeat 0% 15%, 
+  url(./images/ani_flower_02.png) no-repeat 70% 5%;
+  animation: fade-effect 2s infinite alternate;
+}
+
+.visual::after {
+  background: url(./images/ani_flower_03.png) no-repeat 35% 20%, 
+  url(./images/ani_flower_04.png) no-repeat 90% 15%;
+  animation: fade-effect 2s 1s infinite alternate;
+}
+
 /* 
 transform으로 애니메이션 구현할 때, 다른 요소로부터 간섭 받는 문제. 테스트용 코드.
 .visual-text2 {
@@ -245,11 +277,10 @@ transform으로 애니메이션 구현할 때, 다른 요소로부터 간섭 받
 
 .visual-text {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: coral;
-  display: inline-block;
-  animation: move-effect 3s ease-in-out forwards;
-  position: absolute;
+  animation: move-effect 1.5s ease-in-out forwards;
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  position: absolute;
+  z-index: 1;
 }
 
 /* 메인 */
