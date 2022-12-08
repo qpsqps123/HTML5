@@ -29,16 +29,16 @@ a {
 /*  본문 스타일 */
 body {
   font-size: 1.4rem;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   color: #212121;
-  background-color: #ccc;
-  background-image: linear-gradient(
+  background: url(./images/bg_flower.png) no-repeat 50% 0, 
+    #ccc linear-gradient(
     to bottom,
     #ccc 0%,
     #eee 35%,
     #fff 70%,
     #fff 100%
-  );
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  ) repeat 0 0;
 }
 
 /* 레이아웃 */
@@ -233,7 +233,6 @@ body {
 }
 
 .visual {
-  background-color: orange;
   height: 120px;
   position: relative;
 }
@@ -248,7 +247,8 @@ transform으로 애니메이션 구현할 때, 다른 요소로부터 간섭 받
   font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: coral;
   display: inline-block;
-  animation: move-effect 2s forwards;
+  animation: move-effect 3s ease-in-out forwards;
+  position: absolute;
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
