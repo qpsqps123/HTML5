@@ -386,15 +386,51 @@ transform으로 애니메이션 구현할 때, 다른 요소로부터 간섭 받
   content: "\e804";
   font-family: "fontello";
   color: #e85e2c;
-  margin-right: 0.2em;
-  font-size: 12px;
+  margin-right: 0.4em;
+  /* font-size: 12px; */
 }
 
 .sign a {
-  font-size: 12px;
+  /* font-size: 12px; */
   letter-spacing: -0.01em;
   padding: 4px 0;
 }
+
+/* 유효성 검사 배너 */
+.validation-list {
+  /* background-color: yellow; */
+  margin-top: 25px;
+}
+
+.validation-list li {
+  margin-top: 10px;
+}
+
+.validation-list a{
+  display: block;
+  background: url(./images/validation_icon.png) no-repeat 40px 40%, #ccc
+  linear-gradient(
+    to bottom,
+    #ccc 0%,
+    #eee 100%
+  );
+  text-indent: 20px;
+  /* padding: 8px 15px; */
+  padding: 8px 15px 8px 45px;
+  border-radius: 30px;
+  border: 1px solid #aaa;
+}
+
+.validation-list a:hover,
+.validation-list a:focus {
+  color: #f00;
+}
+
+/* .validation-list a::before{
+  content: url(./images/validation_icon.png);
+  margin-right: 0.2em;
+  vertical-align: middle;
+} */
 
 /* 슬로건 */
 .slogan {
