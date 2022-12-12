@@ -433,6 +433,42 @@ transform으로 애니메이션 구현할 때, 다른 요소로부터 간섭 받
   vertical-align: middle;
 } */
 
+/* 웹 관련 용어 */
+.term {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background: #ccc
+  linear-gradient(
+    to bottom,
+    #ccc 0%,
+    #eee 100%
+  );
+}
+
+.term-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.odd {
+  margin: 10px;
+  display: flow-root;
+}
+
+.odd .term-list-thumbnail {
+  float: left;
+}
+
+.odd .term-list-subject {
+
+}
+
+.odd .term-list-brief {
+  
+}
+
+
 /* 슬로건 */
 .slogan {
   background-color: palevioletred;
