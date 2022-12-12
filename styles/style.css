@@ -415,7 +415,8 @@ transform으로 애니메이션 구현할 때, 다른 요소로부터 간섭 받
     #eee 100%
   );
   text-indent: 20px;
-  /* padding: 8px 15px; */
+  /* validation icon을 background image로 넣어주기
+  padding: 8px 15px; */
   padding: 8px 15px 8px 45px;
   border-radius: 30px;
   border: 1px solid #aaa;
@@ -425,8 +426,8 @@ transform으로 애니메이션 구현할 때, 다른 요소로부터 간섭 받
 .validation-list a:focus {
   color: #f00;
 }
-
-/* .validation-list a::before{
+/* validation icon을 background image로 넣어주기
+.validation-list a::before{
   content: url(./images/validation_icon.png);
   margin-right: 0.2em;
   vertical-align: middle;
