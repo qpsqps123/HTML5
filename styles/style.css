@@ -1,6 +1,7 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 @import url(../styles/fontello.css);
+@import url(./module.css);
 
 /* 숨김 콘텐츠 */
 .a11y-hidden, legend {
@@ -306,7 +307,6 @@ transform으로 애니메이션 구현할 때, 다른 요소로부터 간섭 받
 }
 
 .group3 {
-  background-color: purple;
   width: 190px;
 }
 
@@ -609,6 +609,103 @@ tab-list{
 
 .icon-plus::before {
   color: hsla(110, 50%, 30%, 1);
+}
+
+/* 새소식 */
+.news {
+  margin-top: 20px;
+  position: relative;
+}
+
+.news::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: #aaa linear-gradient(to right, #ccc, #fff);
+}
+
+.news-link {
+  display: block;
+}
+
+.news-item {
+  margin-top: 35px;
+  padding-left: 130px;
+  position: relative;
+}
+
+.news-title {
+  color: #e85e2c;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.news-item-title {
+  font-weight: 500;
+}
+
+.news-item-date {
+  display: block;
+  margin: 5px 0 10px;
+}
+
+.news-item-brief {
+  line-height: 1.5;
+}
+
+.news-item-thumbnail {
+  position: absolute;
+  top: 2px; /* 이미지와 옆의 텍스트라인을 일치하게 하기 위해 */
+  left: 0;
+  text-align: center;
+}
+
+.news-item-thumbnail img {
+  box-shadow: 0 15px 10px 5px #ccc;
+  margin-bottom: 15px;
+}
+
+.news-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+/* 신규 이벤트 및 관련 사이트 -> 모듈(module.css)을 만들어서 import하는 방식으로 해봄.*/
+
+.event {
+  border-bottom: 1px solid #aaa;
+}
+
+.event-button-wrapper {
+  background-color: yellow;
+}
+
+.event-button {
+  width: 19px;
+  height: 18px;
+}
+
+.event-thumbnail,
+ .evnet-brief {
+  margin: 10px 0;
+}
+
+.event-brief {
+  line-height: 1.5;
+}
+
+.related {
+  margin-top: 10px;
+}
+
+.related-list {
+  background-color: #fff;
+  margin-top: 10px;
 }
 
 /* 슬로건 */
