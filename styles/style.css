@@ -768,21 +768,27 @@ tab-list{
 .favorite-list {
   /* background-color: yellow; */
   list-style-type: none;
+  counter-reset: number 0; /* number를 0으로 초기화. 0부터 시작 */
 }
 
 .favorite-list li {
-  /* background-color: #1e5799; */
+  position: relative; /* position 방식 */
+  background-color: #1e5799;
   margin-top: 10px;
-  counter-increment: number;
-  counter-reset: 10;
-  display: flex;
+  counter-increment: number; /* number를 1씩 증가 */
+  /* flex방식 */
+  /* display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 
 .favorite-list a {
-  flex-grow: 1;
+  background-color: #aaa;
+  /* flex 방식 */
+  /* flex-grow: 1; */ /* 또는 */
+  /* margin-right: auto; */ /* 를 주면된다 */
+  /* font-size: 24px; 텍스트 크기 반응형 테스트 용도 */
 }
 
 .favorite-list li::before {
@@ -799,11 +805,16 @@ tab-list{
 }
 
 .up, .stop, .down {
-  display: inline-block;
+  /* display: inline-block; position 속성을 주면 기본적으로 블록 상자가 된다. */
   width: 9px;
   height: 11px;
   background-color: pink;
   background: url(./images/rank.png);
+  /* position 방식 */
+  position: absolute;;
+  margin-top: -5px;
+  top: 50%;
+  right: 0;
 }
 
 .stop {
